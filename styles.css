@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: rgb(60, 136, 37);
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Ensure the list has no default margin */
+    display: flex; /* Use flexbox for better control */
+    align-items: center; /* Align items vertically */
+}
+
+nav ul li {
+    display: inline; /* Keeps list items inline */
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 15px 8px; /* Add padding for clickable area */
+}
+
+.container {
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
