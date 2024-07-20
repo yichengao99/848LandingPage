@@ -100,6 +100,42 @@ nav ul li a {
     border: none; /* Removes the border around the iframe */
 }
 
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container3 h2 {
+    margin-bottom: 20px; /* Space between the title and the columns */
+}
+
+.partners-grid {
+    display: flex;
+    width: 100%; /* Take full width to accommodate all columns */
+    justify-content: space-around; /* Evenly space out columns */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column h3 {
+    margin-bottom: 15px; /* Space between the column title and logos */
+}
+
+.column img {
+    width: 80px; /* Set a fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between logos */
+}
+
+
 button {
     background-color: #ffc107;
     color: black;
