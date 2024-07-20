@@ -1,9 +1,19 @@
+.wrapper {
+    width: 1200px;
+    margin: 0 auto; /* Auto margins for horizontal centering */
+    position: relative;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: #ffffff;
     color: #333;
+    display: flex;
+    justify-content: center; /* Centers the wrapper on the page */
+    min-height: 100vh; /* Ensures the page takes minimum full height */
+    align-items: flex-start; /* Aligns the content to the top */
 }
 
 header {
@@ -78,13 +88,11 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative; /* Changed to relative so it moves with the content */
     width: 100%;
-    bottom: 0;
 }
