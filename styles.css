@@ -32,8 +32,45 @@ nav ul li a {
 }
 
 .container {
-    height: 150px;
+    display: flex; /* Ensures flexbox is used */
+    height: 400px; /* You've already set this correctly */
     border: 1px solid #ddd;
+    width: 100%;  /* Make container full width */
+    box-sizing: border-box;
+}
+
+
+.left-half, .right-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.left-half h2, .left-half p {
+    text-align: center;
+}
+.right-half img {
+    max-width: 70%;  /* Ensures the image is not wider than its container */
+    max-height: 70%; /* Ensures the image is not taller than its container */
+    object-fit: contain; /* Ensures the image's aspect ratio is preserved */
+}
+
+
+button {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e0a800;
 }
 
 main {
