@@ -135,6 +135,51 @@ nav ul li a {
     margin-bottom: 10px; /* Space between logos */
 }
 
+.container4 {
+    background-color: white;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none; /* Hide all slides initially */
+    width: 100%; /* Ensure slides do not overflow their container */
+    text-align: center;
+}
+
+.slide.active {
+    display: block; /* Only display the active slide */
+}
+
+.container4 .prev, .container4 .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container4 .prev {
+    left: 10px;
+}
+
+.container4 .next {
+    right: 10px;
+}
+
+.container4 .slide img {
+    width: 100px;      /* Set the width of the image */
+    height: 100px;     /* Set the height of the image */
+    border-radius: 50%; /* Optional: Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+    margin-right: 10px; /* Adds a little space between the image and the text */
+}
+
 
 button {
     background-color: #ffc107;
@@ -163,4 +208,21 @@ footer {
     padding: 10px 0;
     position: relative; /* Changed to relative so it moves with the content */
     width: 100%;
+}
+
+/* About page */
+.about-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+}
+
+.about-section h1 {
+    color: #333; /* Dark grey color for headings */
+}
+
+.about-section p {
+    color: #666; /* Lighter grey color for text, easier on the eyes */
+    line-height: 1.6; /* Increased line height for better readability */
 }
