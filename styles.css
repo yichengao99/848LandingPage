@@ -42,15 +42,20 @@ nav ul li a {
 }
 
 .container {
-    display: flex; /* Ensures flexbox is used */
-    height: 400px; /* You've already set this correctly */
-    border: 1px solid #ddd;
-    width: 100%;  /* Make container full width */
+    width: 100%;  /* Full width of the parent element */
     box-sizing: border-box;
+    padding: 20px; /* Padding around the content */
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Space between containers */
 }
 
+/* Styles specific to Container 1 */
+.container1 {
+    display: flex;
+    height: 400px; /* Fixed height */
+}
 
-.left-half, .right-half {
+.container1 .left-half, .container1 .right-half {
     flex: 1;
     display: flex;
     align-items: center;
@@ -58,15 +63,42 @@ nav ul li a {
     flex-direction: column;
 }
 
-.left-half h2, .left-half p {
-    text-align: center;
-}
-.right-half img {
+.container1 .right-half img {
     max-width: 70%;  /* Ensures the image is not wider than its container */
     max-height: 70%; /* Ensures the image is not taller than its container */
     object-fit: contain; /* Ensures the image's aspect ratio is preserved */
 }
 
+/* Styles specific to Container 2 */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto; /* Flexible height based on content */
+    padding: 20px; /* Padding around the container */
+}
+.container2 .content-area {
+    width: 100%; /* Full width of the container */
+    text-align: center; /* Center align the heading */
+}
+
+.container2 .video-wrapper {
+    position: relative;
+    width: 100%; /* Full width to utilize the container's width */
+    max-width: 800px; /* Maximum width for better aesthetics */
+    margin: auto; /* Center the video horizontally */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.container2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the video wrapper */
+    height: 100%; /* Full height of the video wrapper */
+    border: none; /* Removes the border around the iframe */
+}
 
 button {
     background-color: #ffc107;
