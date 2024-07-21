@@ -173,8 +173,8 @@ nav ul li a {
 }
 
 .container4 .slide img {
-    width: 100px;      /* Set the width of the image */
-    height: 100px;     /* Set the height of the image */
+    width: 200px;      /* Set the width of the image */
+    height: 200px;     /* Set the height of the image */
     border-radius: 50%; /* Optional: Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     margin-right: 10px; /* Adds a little space between the image and the text */
