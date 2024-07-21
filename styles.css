@@ -226,3 +226,29 @@ footer {
     color: #666; /* Lighter grey color for text, easier on the eyes */
     line-height: 1.6; /* Increased line height for better readability */
 }
+
+/* solution page */
+.solution-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+    width: 1160px;
+}
+
+.solution-section h1 {
+    color: #333; /* Dark grey color for headings */
+}
+
+.solution-section p {
+    color: #666; /* Lighter grey color for text, easier on the eyes */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+.solution-img {
+    width: 700px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
