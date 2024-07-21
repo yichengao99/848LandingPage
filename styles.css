@@ -252,3 +252,29 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+/* Team page */
+.team-members {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: space-around; /* Distributes space around items */
+    align-items: center; /* Align items vertically in the middle */
+}
+
+.team-member {
+    margin: 10px; /* Adds space around each team member for better separation */
+    text-align: center; /* Centers the text and image within the team member block */
+    width: 250px; /* Set a fixed width for each team member block */
+}
+
+.team-member img {
+    width: 150px; /* Width of the image */
+    height: 150px; /* Height of the image */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block; /* Ensures the image is a block to center correctly */
+    margin: 0 auto 10px; /* Center aligns the image and adds space below */
+}
+
+.team-member h2, .team-member p {
+    margin: 5px 0; /* Space above and below the name and role */
+}
