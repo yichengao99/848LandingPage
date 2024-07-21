@@ -278,3 +278,22 @@ footer {
 .team-member h2, .team-member p {
     margin: 5px 0; /* Space above and below the name and role */
 }
+
+/* contact page */
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-column {
+    width: 30%; /* Each column takes roughly one-third of the space */
+    text-align: center; /* Center-align the content in each column */
+}
+
+.contact-column img {
+    width: 80%; /* Make the images large enough to be clear but not full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
+    border-radius: 50%;
+}
