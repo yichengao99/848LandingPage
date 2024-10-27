@@ -1,128 +1,325 @@
-/* Global Styles */
-:root {
-    --primary-color: #3c8825;
-    --secondary-color: #ffc107;
-    --text-color: #333;
-    --light-bg: #f9f9f9;
-    --dark-bg: #333;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.wrapper {
+    width: 1200px;
+    margin: 0 auto; /* Auto margins for horizontal centering */
+    position: relative;
 }
 
 body {
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: #ffffff;
-    color: var(--text-color);
-    line-height: 1.6;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Centers the wrapper on the page */
+    min-height: 100vh; /* Ensures the page takes minimum full height */
+    align-items: flex-start; /* Aligns the content to the top */
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', 'Arial', sans-serif;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-}
-
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.5em; }
-
-p {
-    margin-bottom: 15px;
-}
-
-/* Header and Navigation */
 header {
-    background-color: var(--primary-color);
-    padding: 15px 0;
-    box-shadow: var(--shadow);
+    background-color: rgb(60, 136, 37);
+    padding: 10px 20px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: 0; /* Ensure the list has no default margin */
+    display: flex; /* Use flexbox for better control */
+    align-items: center; /* Align items vertically */
 }
 
 nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
+    display: inline; /* Keeps list items inline */
+    margin-right: 40px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 10px;
-    transition: all 0.3s ease;
+    font-size: 1.5em;
+    padding: 15px 8px; /* Add padding for clickable area */
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-}
-
-/* Container Styles */
 .container {
-    margin-bottom: 40px;
-    padding: 40px;
-    border-radius: 8px;
-    background-color: var(--light-bg);
-    box-shadow: var(--shadow);
+    width: 100%;  /* Full width of the parent element */
+    box-sizing: border-box;
+    padding: 20px; /* Padding around the content */
+    border: 1px solid #ddd;
+    margin-bottom: 20px; /* Space between containers */
 }
 
-/* Hero Section (Container 1) */
+/* Styles specific to Container 1 */
 .container1 {
     display: flex;
+    height: 400px; /* Fixed height */
+}
+
+.container1 .left-half, .container1 .right-half {
+    flex: 1;
+    display: flex;
     align-items: center;
-    background-color: white;
-}
-
-.container1 .left-half {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.container1 .right-half {
-    flex: 1;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container1 .right-half img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    max-width: 70%;  /* Ensures the image is not wider than its container */
+    max-height: 70%; /* Ensures the image is not taller than its container */
+    object-fit: contain; /* Ensures the image's aspect ratio is preserved */
 }
 
-/* Key Features Section */
-.key-features-container {
+/* Styles specific to Container 2 */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto; /* Flexible height based on content */
+    padding: 20px; /* Padding around the container */
+}
+.container2 .content-area {
+    width: 100%; /* Full width of the container */
+    text-align: center; /* Center align the heading */
+}
+
+.container2 .video-wrapper {
+    position: relative;
+    width: 100%; /* Full width to utilize the container's width */
+    max-width: 800px; /* Maximum width for better aesthetics */
+    margin: auto; /* Center the video horizontally */
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.container2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the video wrapper */
+    height: 100%; /* Full height of the video wrapper */
+    border: none; /* Removes the border around the iframe */
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container3 h2 {
+    margin-bottom: 20px; /* Space between the title and the columns */
+}
+
+.partners-grid {
+    display: flex;
+    width: 100%; /* Take full width to accommodate all columns */
+    justify-content: space-around; /* Evenly space out columns */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column h3 {
+    margin-bottom: 15px; /* Space between the column title and logos */
+}
+
+.column img {
+    width: 80px; /* Set a fixed width for logos */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between logos */
+}
+
+.container4 {
     background-color: white;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: none; /* Hide all slides initially */
+    width: 100%; /* Ensure slides do not overflow their container */
+    text-align: center;
+}
+
+.slide.active {
+    display: block; /* Only display the active slide */
+}
+
+.container4 .prev, .container4 .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container4 .prev {
+    left: 10px;
+}
+
+.container4 .next {
+    right: 10px;
+}
+
+.container4 .slide img {
+    width: 200px;      /* Set the width of the image */
+    height: 200px;     /* Set the height of the image */
+    border-radius: 50%; /* Optional: Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
+    margin-right: 10px; /* Adds a little space between the image and the text */
+}
+
+
+button {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Changed to relative so it moves with the content */
+    width: 100%;
+}
+
+/* About page */
+.about-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+}
+
+.about-section h1 {
+    color: #333; /* Dark grey color for headings */
+}
+
+.about-section p {
+    color: #666; /* Lighter grey color for text, easier on the eyes */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+/* solution page */
+.solution-section {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light grey background for the section */
+    border-radius: 8px; /* Optional: Adds rounded corners for a softer look */
+    width: 1160px;
+}
+
+.solution-section h1 {
+    color: #333; /* Dark grey color for headings */
+}
+
+.solution-section p {
+    color: #666; /* Lighter grey color for text, easier on the eyes */
+    line-height: 1.6; /* Increased line height for better readability */
+}
+
+.solution-img {
+    width: 700px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Team page */
+.team-members {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: space-around; /* Distributes space around items */
+    align-items: center; /* Align items vertically in the middle */
+}
+
+.team-member {
+    margin: 10px; /* Adds space around each team member for better separation */
+    text-align: center; /* Centers the text and image within the team member block */
+    width: 250px; /* Set a fixed width for each team member block */
+}
+
+.team-member img {
+    width: 150px; /* Width of the image */
+    height: 150px; /* Height of the image */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block; /* Ensures the image is a block to center correctly */
+    margin: 0 auto 10px; /* Center aligns the image and adds space below */
+}
+
+.team-member h2, .team-member p {
+    margin: 5px 0; /* Space above and below the name and role */
+}
+
+/* contact page */
+.contact-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-column {
+    width: 30%; /* Each column takes roughly one-third of the space */
+    text-align: center; /* Center-align the content in each column */
+}
+
+.contact-column img {
+    width: 80%; /* Make the images large enough to be clear but not full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
+    border-radius: 50%;
+}
+.key-features-container {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.key-features-container h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    justify-content: center;
 }
 
 .feature-card {
-    background-color: var(--light-bg);
+    background-color: white;
     border-radius: 8px;
-    padding: 25px;
-    box-shadow: var(--shadow);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -131,117 +328,22 @@ nav ul li a:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+.feature-icon {
+    margin-bottom: 15px;
+}
+
 .feature-icon svg {
     width: 48px;
     height: 48px;
-    color: var(--primary-color);
+    color: #3c8825; /* This matches the green color used in your header */
 }
 
-/* Solution Demo (Container 2) */
-.container2 .video-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #3c8825;
 }
 
-/* Testimonials (Container 4) */
-.container4 {
-    background-color: white;
-}
-
-.slider {
-    position: relative;
-    padding: 20px 40px;
-}
-
-.slide {
-    background-color: var(--light-bg);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: var(--shadow);
-}
-
-.slide img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid var(--primary-color);
-}
-
-.container4 .prev, .container4 .next {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-}
-
-/* Partners Section (Container 3) */
-.partners-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.column {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-/* Button Styles */
-button {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #e0a800;
-}
-
-/* Footer */
-footer {
-    background-color: var(--dark-bg);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container1 {
-        flex-direction: column;
-    }
-
-    .container1 .left-half {
-        padding-right: 0;
-        padding-bottom: 20px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+.feature-card p {
+    font-size: 0.9em;
+    color: #666;
 }
